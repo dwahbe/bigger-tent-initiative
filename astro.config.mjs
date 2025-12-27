@@ -5,7 +5,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://biggertentinitiative.org', // Update with your actual domain
+  site: 'https://bigger-tent-initiative.vercel.app',
   vite: {
     plugins: [tailwindcss()]
   }
