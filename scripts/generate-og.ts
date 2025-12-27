@@ -1,4 +1,4 @@
-import { chromium } from 'playwright';
+import { chromium } from "playwright";
 
 const html = `
 <!DOCTYPE html>
@@ -34,21 +34,20 @@ const html = `
 async function generateOG() {
   const browser = await chromium.launch();
   const page = await browser.newPage();
-  
+
   await page.setViewportSize({ width: 1200, height: 630 });
   await page.setContent(html);
-  
+
   // Wait for fonts to load
   await page.waitForTimeout(500);
-  
-  await page.screenshot({ 
-    path: 'public/og.png',
-    type: 'png'
+
+  await page.screenshot({
+    path: "public/og.png",
+    type: "png",
   });
-  
+
   await browser.close();
-  console.log('✓ Generated public/og.png');
+  console.log("✓ Generated public/og.png");
 }
 
 generateOG();
-
